@@ -8,7 +8,7 @@ Lenguaje minimo para demostrar tres estrategias de ejecucion del mismo programa:
 | 2. Bytecode + VM | `fiblang/bytecode.py`, `fiblang/vm.py` | AST -> instrucciones -> maquina de pila |
 | 3. Nativo | `fiblang/cgen.py` | AST -> C -> GCC -> ejecutable |
 
-Interfaz: `fiblang/gui.py` (servidor local) y `fiblang/web/index.html`.
+Interfaz: `gui.py` (servidor local) y `web/index.html`.
 
 Frontend compartido: `tokens.py` (lexer), `ast_nodes.py`, `parser.py`.
 

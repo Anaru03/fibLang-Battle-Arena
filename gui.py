@@ -72,7 +72,7 @@ class Handler(BaseHTTPRequestHandler):
             if not shutil.which('gcc'):
                 return self.respond(503, {'error': 'Instala GCC para la carrera nativa'})
             proc = subprocess.run([sys.executable, '-m', 'fiblang.battle_worker', str(n)],
-                                  cwd=str(WEB_DIR.parent.parent), capture_output=True,
+                                  cwd=str(WEB_DIR.parent), capture_output=True,
                                   text=True, timeout=12)
             if proc.returncode != 0:
                 return self.respond(500, {'error': 'Error al ejecutar el experimento: ' + proc.stderr[-400:]})
